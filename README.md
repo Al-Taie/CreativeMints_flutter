@@ -1,4 +1,4 @@
-# third_app
+# Creative Mints
 
 A new Flutter project.
 
