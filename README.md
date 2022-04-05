@@ -2,6 +2,10 @@
 
 A new Flutter project.
 
+
+![image](https://github.com/Al-Taie/CreativeMints_flutter/blob/master/img.png)
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
