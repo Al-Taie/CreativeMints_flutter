@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
 
 class Rectangle extends StatelessWidget {
-  late Color color;
-  late IconData icon;
-  late String title;
-  late String content;
+  final Color color;
+  final IconData icon;
+  final String title, content;
 
-  Rectangle(
+  const Rectangle(
       {Key? key,
-      required Color color,
-      required IconData icon,
-      required String title,
-      required String content})
-      : super(key: key) {
-    this.color = color;
-    this.icon = icon;
-    this.title = title;
-    this.content = content;
-  }
+      required this.color,
+      required this.icon,
+      required this.title,
+      required this.content})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +39,7 @@ class Rectangle extends StatelessWidget {
               style: const TextStyle(
                   fontSize: 14,
                   color: Colors.white,
-                  fontWeight: FontWeight.bold
-              ),
+                  fontWeight: FontWeight.bold),
             ),
             Text(
               content,
