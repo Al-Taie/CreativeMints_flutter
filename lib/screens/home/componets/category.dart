@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
-  late Color color;
-  late IconData icon;
-  late String title;
+  final Color color;
+  final IconData icon;
+  final String title;
 
-  Category(
-      {Key? key,
-      Color color = Colors.white,
-      required IconData icon,
-      required String title})
-      : super(key: key) {
-    this.color = color;
-    this.icon = icon;
-    this.title = title;
-  }
+  const Category({Key? key,
+    this.color = Colors.white,
+    required this.icon,
+    required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +17,14 @@ class Category extends StatelessWidget {
       child: Container(
         height: 75,
         decoration:
-            BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                  color: Colors.grey,
-                    width: 1
-                ),
-                borderRadius: BorderRadius.circular(8)
+        BoxDecoration(
+            color: Colors.white,
+            border: Border.all(
+                color: Colors.grey,
+                width: 1
             ),
+            borderRadius: BorderRadius.circular(8)
+        ),
         child: Padding(
           padding: const EdgeInsets.only(left: 16.0),
           child: Row(
@@ -40,10 +35,10 @@ class Category extends StatelessWidget {
                 width: 40,
                 child: Icon(icon, color: Colors.white, size: 28),
                 decoration: BoxDecoration(
-                  color: color,
+                    color: color,
                     borderRadius: BorderRadius.circular(50)),
               ),
-              SizedBox(width: 8),
+              const SizedBox(width: 8),
               Text(title,
                 softWrap: true,
                 style: const TextStyle(
