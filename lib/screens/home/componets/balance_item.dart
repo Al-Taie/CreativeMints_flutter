@@ -1,37 +1,27 @@
 import 'package:flutter/material.dart';
 
 class BalanceItem extends StatelessWidget {
-  late Color color;
-  late Color backgroundColor;
-  late Color fontColor;
-  late IconData icon;
-  late String title;
-  late String content;
+  final Color color, backgroundColor, fontColor;
+  final IconData icon;
+  final String title, content;
 
-  BalanceItem(
+  const BalanceItem(
       {Key? key,
-      required Color color,
-      Color backgroundColor = Colors.white,
-      Color fontColor = Colors.white,
-      required IconData icon,
-      required String title,
-      required String content})
-      : super(key: key) {
-    this.backgroundColor = backgroundColor;
-    this.fontColor = fontColor;
-    this.color = color;
-    this.icon = icon;
-    this.title = title;
-    this.content = content;
-  }
+      required this.color,
+      this.backgroundColor = Colors.white,
+      this.fontColor = Colors.white,
+      required this.icon,
+      required this.title,
+      required this.content})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 164,
       width: 128,
-      decoration:
-          BoxDecoration(color: backgroundColor, borderRadius: BorderRadius.circular(8)),
+      decoration: BoxDecoration(
+          color: backgroundColor, borderRadius: BorderRadius.circular(8)),
       child: Padding(
         padding: const EdgeInsets.only(left: 16.0),
         child: Column(
@@ -49,11 +39,11 @@ class BalanceItem extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                  fontSize: 21,
-                  color: fontColor,
+                fontSize: 21,
+                color: fontColor,
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               content,
               style: TextStyle(fontSize: 12, color: Colors.grey[600]),
