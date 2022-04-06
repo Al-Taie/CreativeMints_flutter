@@ -1,6 +1,10 @@
-# third_app
+# Creative Mints
 
 A new Flutter project.
+
+
+![image](https://github.com/Al-Taie/CreativeMints_flutter/blob/master/img.png)
+
 
 ## Getting Started
 
