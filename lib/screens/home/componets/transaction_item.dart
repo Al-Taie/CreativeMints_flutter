@@ -29,31 +29,27 @@ class _TransactionItemState extends State<TransactionItem> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                    child: Icon(userProvider.data[index]['icon'], color: Colors.white),
-                      decoration: BoxDecoration(
-                        color: userProvider.data[index]['color'],
-                          borderRadius: BorderRadius.circular(50),
+                    Row(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 50,
+                        child: Icon(userProvider.data[index]['icon'], color: Colors.white),
+                          decoration: BoxDecoration(
+                            color: userProvider.data[index]['color'],
+                              borderRadius: BorderRadius.circular(50),
                 ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 16),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          // IconButton(
-                          //     onPressed: () =>
-                          //         userProvider.removeElement(index),
-                          //     icon: const Icon(Icons.delete)),
-                          Column(
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 24, left: 24),
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 userProvider.data[index]['title'],
                                 style: const TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 16),
+                                    fontWeight: FontWeight.bold, fontSize: 16
+                                ),
                               ),
                               Text(
                                 userProvider.data[index]['content'],
@@ -64,14 +60,15 @@ class _TransactionItemState extends State<TransactionItem> {
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
+
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
                         userProvider.data[index]['balance'],
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
